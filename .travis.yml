@@ -4,7 +4,9 @@ services:
   - postgresql
 
 before_script:
+  - export PGPASSWORD="postgres"
   - psql -c 'create database invoicify;' -U postgres
 
 before_install:
+  - export PGPASSWORD="postgres"
   - psql -c 'create database invoicify;' -U postgres
